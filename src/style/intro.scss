@@ -1,0 +1,645 @@
+$blue: rgb(33, 179, 251);
+$lightblue: rgba(35, 215, 252, .75);
+$darkblue:rgba(0, 57, 100, .3);
+
+.intro_section {
+  position: absolute;
+  height: 100vh;
+}
+
+@keyframes exitIntro {
+  100%{visibility: hidden;}
+}
+
+//opening beam
+
+.start_beam_article {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  animation: exitIntro 1s 2s forwards;
+}
+
+.start_beam_div__bluecone {
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 0 solid $blue;
+  border-radius: 40%;
+  animation: bluecone 1s 1 forwards;
+}
+
+.start_beam_div__lightcone {
+  position: absolute;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 0 solid $lightblue;
+  border-radius: 30%;
+  animation: lightcone 1s 1 forwards;
+}
+
+@keyframes bluecone {
+  0% {
+    width: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid $blue;
+  }
+  5% {
+    width: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 10vh solid $blue;
+  }
+  10%{
+    width: 0;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 80vh solid $blue;
+  }
+  50%{
+    width: 0;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 150vh solid $blue;
+  }
+  75%{
+    width: 0;
+  }
+  100%{
+    width: 100rem;
+    border-left: 500vw solid transparent;
+    border-right: 500vw solid transparent;
+    border-top: 150vh solid $blue;
+  }
+}
+
+
+@keyframes lightcone {
+  0% {
+    width: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid $lightblue;
+  }
+  5% {
+    width: 0;
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 10vh solid $lightblue;
+  }
+  10%{
+    width: 0;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-top: 80vh solid $lightblue;
+  }
+  50%{
+    width: 0;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    border-top: 150vh solid $lightblue;
+  }
+  75%{
+    width: 0;
+  }
+  100%{
+    width: 100rem;
+    border-left: 500vw solid transparent;
+    border-right: 500vw solid transparent;
+    border-top: 150vh solid rgb(48, 116, 161);
+    z-index: 2;
+  }
+}
+
+
+//spotlight cones
+
+.one_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_one .75s 1 forwards,
+    spotlight_one infinite 2s .75s forwards;
+}
+
+@keyframes openlight_one {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes spotlight_one {
+  0%{
+    transform: rotate(15deg);
+  }
+  50%{
+    transform: rotate(20deg);
+    }
+  100%{
+    transform: rotate(15deg);
+  }
+}
+
+.two_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_two .75s 1 forwards,
+    spotlight_two infinite 3s .75s forwards;
+}
+
+@keyframes openlight_two {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 8vw solid transparent;
+    border-right: 8vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes spotlight_two {
+  0%{
+    transform: rotate(40deg);
+  }
+  50%{
+    transform: rotate(25deg);
+    }
+  100%{
+    transform: rotate(40deg);
+  }
+}
+
+.three_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_three .75s 1 forwards,
+    spotlight_three infinite 2s .75s forwards;
+}
+
+@keyframes openlight_three {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 6vw solid transparent;
+    border-right: 6vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes spotlight_three {
+  0%{
+    transform: rotate(-20deg);
+  }
+  50%{
+    transform: rotate(-35deg);
+    }
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+
+.four_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_four .75s 1 forwards,
+    spotlight_four infinite 4s .75s forwards;
+}
+
+@keyframes openlight_four {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 4vw solid transparent;
+    border-right: 4vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes spotlight_four {
+  0%{
+    transform: rotate(-60deg);
+  }
+  50%{
+    transform: rotate(-45deg);
+    }
+  100%{
+    transform: rotate(-60deg);
+  }
+}
+
+.five_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_five .75s 1 forwards,
+    spotlight_five infinite 4s .75s forwards;
+}
+
+@keyframes openlight_five {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 7vw solid transparent;
+    border-right: 7vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes spotlight_five {
+  0%{
+    transform: rotate(-80deg);
+  }
+  50%{
+    transform: rotate(-70deg);
+    }
+  100%{
+    transform: rotate(-80deg);
+  }
+}
+
+.six_cone {
+  z-index: 3;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_six .75s 1 forwards,
+    spotlight_six infinite 2s .75s forwards;
+}
+
+@keyframes openlight_six {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 3;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(80deg);
+  }
+}
+
+@keyframes spotlight_six {
+  0%{
+    transform: rotate(80deg);
+  }
+  50%{
+    transform: rotate(70deg);
+    }
+  100%{
+    transform: rotate(80deg);
+  }
+}
+
+.seven_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_seven .75s 1 forwards,
+    spotlight_seven infinite 3s .75s forwards;
+}
+
+@keyframes openlight_seven {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 6vw solid transparent;
+    border-right: 6vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes spotlight_seven {
+  0%{
+    transform: rotate(60deg);
+  }
+  50%{
+    transform: rotate(80deg);
+    }
+  100%{
+    transform: rotate(60deg);
+  }
+}
+
+.eight_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_eight .75s 1 forwards,
+    spotlight_eight infinite 4s .75s forwards;
+}
+
+@keyframes openlight_eight {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(-50deg);
+  }
+}
+
+@keyframes spotlight_eight {
+  0%{
+    transform: rotate(-50deg);
+  }
+  50%{
+    transform: rotate(0);
+    }
+  100%{
+    transform: rotate(-50deg);
+  }
+}
+
+.nine_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_nine .75s 1 forwards,
+}
+
+@keyframes openlight_nine {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(-60deg);
+  }
+}
+
+.ten_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_ten .75s 1 forwards,
+}
+
+@keyframes openlight_ten {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(5deg);
+  }
+}
+
+.eleven_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_eleven .75s 1 forwards,
+}
+
+@keyframes openlight_eleven {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(40deg);
+  }
+}
+
+.twelve_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_twelve .75s 1 forwards,
+}
+
+@keyframes openlight_twelve {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 150vh solid $lightblue;
+    transform: rotate(55deg);
+  }
+}
+
+.thirteen_cone {
+  z-index: 2;
+  position: absolute;
+  transform-origin: bottom;
+  animation: 
+    openlight_thirteen .75s 1 forwards,
+}
+
+@keyframes openlight_thirteen {
+  0%{
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    border-top: 2vh solid rgb(75, 189, 255);
+    transform: rotate(0deg);
+    }
+  90%{
+    transform: rotate(0deg);
+  }
+  99%{
+    z-index: 1;
+  }
+  100%{
+    z-index: 2;
+    border-left: 6vw solid transparent;
+    border-right: 6vw solid transparent;
+    border-top: 150vh solid $darkblue;
+    transform: rotate(-15deg);
+  }
+}
+
+
+//words
+
+.title_article {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  img {
+    position: absolute;
+    opacity: 0;
+    top: 14vh;
+    max-width: 70vw;
+    animation: enterTitle 1s 1s forwards;
+  }
+}
+
+@keyframes enterTitle {
+  70%{opacity: 1; transform: scale(1.2);}
+  100%{opacity: 1;}
+}

@@ -1,0 +1,114 @@
+
+.article_quotes {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 5;
+}
+
+.article_quotes__span {
+  color:rgb(77, 77, 77);
+  padding: .5rem;
+  font-size: 1.5rem;
+  font-family: 'futurama-bold';
+  cursor: pointer;
+  position: absolute;
+  width: 10rem;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  border-radius: .5rem;
+  transform: translate(-50%, -50%);
+  transition: 400ms ease-in-out;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid rgb(77, 77, 77);
+  overflow: hidden;
+  user-select: none;
+}
+.box {
+  overflow: hidden;
+  height: 5rem;
+}
+
+.circle {
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    animation: 
+      enterCircle 1s,
+      exitCircle 1s 2s forwards;
+  }
+
+@keyframes enterCircle {
+  100% {transform: scale(100)}
+}
+
+@keyframes exitCircle {
+  100% {opacity: 0;}
+}
+.article_quotes__span:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 400ms ease-in-out;
+}
+
+.article_quotes__section {
+  width: 100vw;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: rgba(36, 36, 36, 0.75);
+  bottom: 0;
+  padding: 4vh 5vw 8vh 5vw;
+  .article_quotes__section_quote__div {
+    max-width: 35rem;
+    margin-bottom: 5vh;
+    margin-right: 4vw;
+    color:  rgb(225, 226, 226);
+    animation: enterQuote 1s;
+    h2 {
+      text-transform: uppercase;
+      font-family: 'futurama-bold';
+      margin-bottom: 1rem;
+      color: rgb(233, 58, 52);
+      text-shadow: 2px 1px rgb(236, 185, 19);
+      animation: enterQuote 1s;
+    }
+    p {
+      line-height: 3rem;
+      font-family: 'Reem Kufi', sans-serif;
+      padding-left: 2rem;
+      margin: 0;
+      font-size: 1.5rem;
+      animation: enterQuote 1s;
+    }
+  }
+}
+
+.episode_name {
+  max-width: 30rem;
+  padding: 1vh 5vw;
+  background: rgba(36, 36, 36, 0.75);
+  border-radius: 0 0 1rem 0;
+  animation: enterQuote 1s;
+  h4 {
+    font-family: 'futurama-title';
+    margin: 1rem;
+    color: rgb(226, 225, 225);
+    letter-spacing: 3px;
+    animation: enterQuote 1s;
+  }
+}
+
+@keyframes enterQuote {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@media only screen and (max-width: 600px) {
+  .article_quotes__section {
+    flex-direction: column;
+  }
+}

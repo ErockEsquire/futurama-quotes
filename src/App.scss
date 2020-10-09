@@ -1,0 +1,27 @@
+:root {
+  font-size: 16px;
+}
+
+.App {
+  overflow: hidden;
+}
+
+.main_elem {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(27, 27, 27);
+  position: relative;
+}
+
+.main_section {
+  position: absolute;
+  background: url('./images/ship.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: enterMain 3s 2s forwards;
+}
+
+@keyframes enterMain {
+  100% {opacity: 1;}
+}
