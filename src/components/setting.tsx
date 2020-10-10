@@ -126,6 +126,7 @@ const images = [
   "/images/splash/futurama_14.jpg",
   "/images/splash/futurama_14.png",
   "/images/splash/futurama_15.jpg",
+  "/images/splash/futurama_15.png",
   "/images/splash/futurama_16.jpg",
   "/images/splash/futurama_17.jpg",
   "/images/splash/futurama_18.jpg",
@@ -138,4 +139,7 @@ const images = [
   "/images/splash/futurama_25.jpg",
   "/images/splash/futurama_26.jpg",
   "/images/splash/futurama_27.jpg",
+  "/images/splash/futurama_28.jpg",
+  "/images/splash/futurama_29.jpg",
+  "/images/splash/futurama_30.jpg",
 ]
