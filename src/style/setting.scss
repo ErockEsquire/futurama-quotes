@@ -779,7 +779,7 @@ $s2:"";
 @media only screen and (max-width: 800px) {
   .article_title__img.small {
     width: 60vw;
-    top: 9vh;
+    top: 10vh;
   }
   .article_image {
     position: absolute;
@@ -796,11 +796,16 @@ $s2:"";
 
 @media only screen and (max-width: 600px) {
   .article_title__img {
-    width: 90vw;
+    width: 95vw;
+    top: 20vh;
   }
 
   .article_title__img.small {
     height: initial;
+  }
+
+  .article_image {
+    top: 22%;
   }
 
   .ten_cone {
