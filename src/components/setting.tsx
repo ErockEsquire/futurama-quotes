@@ -87,7 +87,6 @@ export default function Setting (props: any) {
   )
 }
 
-
 const selectImage = (images: any) => {
   const imageNum = Math.floor(Math.random() * Math.floor(images.length))
   return [images[imageNum], imageNum]
