@@ -4,7 +4,8 @@ Built with React + Typescript + SASS
 ## Futurama Quotes
 
 A website dedicated to the nostalgia of an amazing show, Futurama. The application includes over 100 quotes and over 50 Futurama images.  
-Built to immortalize my love of this show, and the first of a series..  
+  
+Built to immortalize my love of this show, and the first of a series of quotes sites..  
 
 Simple Typescript for typing, and more importantly custom SASS.  
 Includes a small object database of quotes with keys for speaker, the quote, and episode name & number.  
