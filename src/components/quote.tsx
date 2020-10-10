@@ -43,7 +43,7 @@ export default function Quote (props: any) {
           <p>"{quote[0].quote}"</p>
         </div>
         {quote[0].speakerTwo && 
-        <div key={index} className="section_quotes__article_quote__div second">
+        <div className="section_quotes__article_quote__div second">
           {quote[0].speakerTwo && <h2>{quote[0].speakerTwo}</h2>}
           {quote[0].quoteTwo && <p>"{quote[0].quoteTwo}"</p>}
         </div>}
