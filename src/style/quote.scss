@@ -100,12 +100,6 @@
     animation: enterQuote 1s;
   }
 }
-.first {
-  margin-left: 0;
-}
-.second {
-  margin-right: 0;
-}
 
 .section_quotes__article_top {
   display: flex;
@@ -138,7 +132,7 @@
 
 
 @media only screen and (max-width: 600px) {
-  .article_quotes__section {
+  .section_quotes__article {
     flex-direction: column;
   }
   .section_quotes__article_quote__div {
