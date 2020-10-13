@@ -185,4 +185,7 @@ const futurama = [
 {speaker: "Professor Farnsworth", quote: "I'm afraid the Smelloscope can't locate Bender. His fragrance is too mild. It's being overwhelmed by local sources.", speakerTwo: "Zoidberg", quoteTwo: "Hooray, people are paying attention to me!", episode: "Godfellas", code: "S03E20"},
 {speaker: "Monk One", quote: "He speaks out of love for his friend. Perhaps that love in his heart is God.", speakerTwo: "Monk Two", quoteTwo: "Oh, how convenient! A way of looking for God that doesn't require looking through a telescope. Get back to work!", episode: "Godfellas", code: "S03E20"},
 {speaker: "Fry", quote: "Man, I don't wanna hurt Bender's feelings but this food actually tastes better as vomit!", episode: "The 30% Iron Chef", code: "S03E22"},
+{speaker: "Fry", quote: "Wait, there on the screen! It's that guy you are!", episode: "Bendless Love", code: "S03E06"},
+{speaker: "Leela", quote: "So Flexo and Angeline had sex right there on the factory floor?", episode: "Bendless Love", code: "S03E06"},
+{speaker: "Fry", quote: "Uh, I've got talking hump syndrome..", speakerTwo: "Robot", quoteTwo: "Ah, THS.", episode: "A Clone of My Own", code: "S02E15"},
 ]
